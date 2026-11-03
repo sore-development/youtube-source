@@ -22,8 +22,8 @@ allprojects {
     repositories {
         mavenLocal()
         mavenCentral()
-        maven(url = "https://maven.mja.moe/releases")
-        maven(url = "https://maven.mja.moe/snapshots")
+        maven(url = "https://maven.sore.moe/releases")
+        maven(url = "https://maven.sore.moe/snapshots")
         maven(url = "https://maven.lavalink.dev/releases")
         maven(url = "https://jitpack.io")
     }
@@ -47,8 +47,8 @@ subprojects {
         val mavenPassword = findProperty("MAVEN_PASSWORD") as String?
         if (!mavenUsername.isNullOrEmpty() && !mavenPassword.isNullOrEmpty()) {
             repositories {
-                val snapshots = "https://maven.mja.moe/snapshots"
-                val releases = "https://maven.mja.moe/releases"
+                val snapshots = "https://maven.sore.moe/snapshots"
+                val releases = "https://maven.sore.moe/releases"
 
                 maven(if (release) releases else snapshots) {
                     credentials {
@@ -58,7 +58,7 @@ subprojects {
                 }
             }
         } else {
-            logger.lifecycle("Not publishing to maven.mja.moe because credentials are not set")
+            logger.lifecycle("Not publishing to maven.sore.moe because credentials are not set")
         }
     }
 }
