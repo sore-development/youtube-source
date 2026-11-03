@@ -31,12 +31,12 @@ import java.util.regex.Pattern;
 
 public class Tv extends StreamingNonMusicClient {
     private static final Logger log = LoggerFactory.getLogger(Tv.class);
-    private static final String USER_AGENT = "Mozilla/5.0 (ChromiumStylePlatform) Cobalt/25.lts.30.1034943-gold (unlike Gecko), Unknown_TV_Unknown_0/Unknown (Unknown, Unknown)";
+    private static final String USER_AGENT = "Mozilla/5.0 (PlayStation; PlayStation 4/12.00) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Safari/605.1.15";
 
     public static ClientConfig BASE_CONFIG = new ClientConfig()
         .withClientName("TVHTML5")
         .withUserAgent(USER_AGENT)
-        .withClientField("clientVersion", "7.20260707.07.00");
+        .withClientField("clientVersion", "7.20250319.10.00");
 
     protected ClientOptions options;
     protected volatile String visitorData;
